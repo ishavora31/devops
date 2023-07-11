@@ -1,1 +1,7 @@
-#initial commit
+clone:
+  depth: full
+pipelines:
+  default:
+    - step:
+        script:
+          - git push --mirror git@github.com:ishavora31/devops.git
