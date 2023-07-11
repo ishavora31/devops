@@ -14,7 +14,7 @@ if ($weatherData) {
     echo "Condition: " . $weatherData['condition']['text'] . "\n";
     // You can access other weather attributes here
 } else {
-    echo "Failed to retrieve weather data.";
+    echo "Failed to retrieve weather data";
 }
 
 
