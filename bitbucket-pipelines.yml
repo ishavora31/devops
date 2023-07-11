@@ -1,7 +1,11 @@
-clone:
-  depth: full
+image: atlassian/default-image:2
+
 pipelines:
-  default:
-    - step:
-        script:
-          - git push --mirror git@github.com:ishavora31/devops.git
+    branches:
+      backend:
+        - step:
+           script:
+             - git checkout backend
+             - git pull    
+             - git remote add sync git@github.com:ishavora31/devops.git
+             - git push sync backend
