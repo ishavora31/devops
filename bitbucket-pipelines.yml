@@ -1,9 +1,9 @@
 image: atlassian/default-image:2
 
 pipelines:
-    branches:
-      backend:
+    default:
         - step:
+           name: Syncing current branch to remote GitHub
            script:
              - git checkout backend
              - git pull    
